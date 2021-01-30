@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Spotify Downloader
+{% endblock %}
+{% block content %}
+
+
+<body style="height:100vh; display:flex; flex-direction:column;">
+
+<div class="container" style="margin-top:30px">
+	<div class="row">
+		<div class="col-sm-4">
+			<h2>About</h2>
+			<p>Download your Spotify Playlist offline</p>
+		</div>
+		<div class="col-sm-8"; style="max-height: 50vh">
+			<h2>Login to Spotify</h2>
+			<a href="/login" class="btn btn-success">Login to Spotify</a>
+		</div>
+	</div>
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Download playlist {% endblock %}
+{% block content %}
+
+<body style="height:100vh; display:flex; flex-direction:column;">
+
+<div class="container" style="margin-top:30px">
+	<div class="row">
+		<div class="col-sm-4">
+			<h2>About</h2>
+			<p>Download your Spotify playlist offline</p>
+		</div>
+		<div class="col-sm-8">
+			<h2>Please click on the zip file below to download!</h2>
+			<a href={{file}} download>Download Your Songs</a>
+		</div>
+	</div>
+
+	<button type="button" class="btn btn-success btn-xs" onclick="refreshTokens()">Refresh Token</button>
+	<a href="/logout" class="btn btn-danger btn-xs">Logout</a><br><br>
+</body>
+</html>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.1/handlebars.js"></script>
+<script>
+	(function() {
+
+		// Token template
+		var tokenSource = document.getElementById('token-template').innerHTML,
+				tokenTemplate = Handlebars.compile(tokenSource),
+				tokenPlaceholder = document.getElementById('tokens');
+
+		function refreshTokens() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					let res_json = JSON.parse(this.responseText);
+					tokenPlaceholder.innerHTML = tokenTemplate(res_json);
+				}
+			};
+			xhttp.open("GET", "{{ url_for('refresh_token') }}", true);
+			xhttp.send();
+		}
+
+		window.refreshTokens = refreshTokens;
+	})();
+</script>
+
+{% endblock %}

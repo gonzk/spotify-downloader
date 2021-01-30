@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% block head %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Unica+One&display=swap"
+        rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!--  <link rel="stylesheet" href="/staticcss">-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+  <style>
+
+  </style>
+
+  <title>{% block title %}{% endblock %}</title>
+  {% endblock %}
+</head>
+<body>
+<div class="jumbotron text-center" id="name" style="background-color:#5ABCB9; font-family: Lato; width: 100%;">
+	<a class="home" href="/" style="text-decoration: none; color: #26532b">
+		<h1>Spotify Downloader</h1>
+	</a>
+</div>
+<div class="container">
+  <h1 class="mt-3 mb-3">{% block header %}{% endblock %}</h1>
+  <div id="content">{% block content %}{% endblock %}</div>
+  <footer class="page-footer fixed-bottom d-flex justify-content-center mt-auto" style="background-color: #5ABCB9;
+	text-align: center; color: #26532b; position: static; bottom: 0; width: 100%; height: 5rem; font-family: Lato">
+
+		<!-- Footer Elements -->
+		<div class="d-inline-flex p-3 footer-elements">
+
+			<!-- Grid column -->
+			<div class="col-md-12" s>
+				<!--Linkedin -->
+				<a class="li-ic" role="button" href="https://www.linkedin.com/in/gonzaleskr" target="_blank">
+					<i class="fab fa-linkedin-in fa-lg white-text mr-md-2 mr-2 fa-2x"
+					   style="color: white; align-items: center;"> </i>
+				</a>
+				<!--Github-->
+				<a class="git-ic" role="button" href="https://github.com/gonzk" target="_blank">
+					<i class="fab fa-github fa-lg white-text mr-md-2 mr-2 fa-2x" style="color: white;
+					align-items: center"> </i>
+				</a>
+				<!--Email-->
+				<a class="email-ic mr-3" role="button" href="mailto:kristine.rgonz@gmail.com" target="_blank">
+					<i class="far fa-lg fa-envelope fa-lg white-text mr-md-2 mr-2 fa-2x" style="color: white;
+					align-items: center"></i>
+				</a>
+
+				<!-- Copyright -->
+				<div class="footer-copyright">Copyright © 2021 Kristine Gonzales
+				</div>
+				<!-- Copyright -->
+
+			</div>
+			<!-- Grid column -->
+
+		</div>
+		<!-- Footer Elements -->
+
+	</footer>
+</div>
+</body>
+</html>
