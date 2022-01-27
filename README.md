@@ -16,7 +16,7 @@ $ pip install -r requirements.txt
 ```
 
 ### Installing
-Step 1: Upload your Google `client_secret.json` file and store your Spotify credentials into an `.env` file
+Step 1: Upload your `client_secret.json` file and store your Spotify credentials into an `.env` file
 
 Step 2: In the terminal run:
 ```
