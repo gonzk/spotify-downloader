@@ -38,8 +38,6 @@ This should produce a similar output to:
 ## Built With
 
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/) - The web framework used
-* [PythonAnywhere](https://www.pythonanywhere.com/) - Web hosting used
-
 
 ## License
 MIT License
